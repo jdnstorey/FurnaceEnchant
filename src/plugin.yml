@@ -1,0 +1,5 @@
+name: Furnace
+main: me.blackthunder.furnace.Main
+author: BlackThunder
+version: 1.0
+api-version: 1.15
