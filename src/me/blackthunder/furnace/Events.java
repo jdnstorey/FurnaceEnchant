@@ -1,6 +1,5 @@
 package me.blackthunder.furnace;
 
-import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
@@ -21,11 +20,11 @@ public class Events implements Listener {
         Player p = e.getPlayer();
         Location loc = block.getLocation();
 
-        if(block.getType().equals(Material.IRON_ORE)) {
+        if(block.getType().equals(Material.RAW_IRON) || block.getType().equals(Material.IRON_ORE) || block.getType().equals(Material.DEEPSLATE_IRON_ORE)) {
             e.setDropItems(false);
             loc.getWorld().dropItem(loc, iron);
 
-        } else if (block.getType().equals(Material.GOLD_ORE)){
+        } else if (block.getType().equals(Material.RAW_GOLD) || block.getType().equals(Material.GOLD_ORE) || block.getType().equals(Material.DEEPSLATE_GOLD_ORE)){
             e.setDropItems(false);
             loc.getWorld().dropItem(loc, gold);
         } else {
